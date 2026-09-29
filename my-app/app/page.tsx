@@ -38,10 +38,10 @@ const applications = [
 export default function Home() {
   return (
     <div className="dashboard">
-      <Sidebar />
+      {/* <Sidebar /> */}
 
-      <div className="main-content">
-        <Navbar />
+      <div>
+        {/* <Navbar /> */}
 
         <main className="content">
           <h2>Welcome to Excellence Tutor</h2>

@@ -1,10 +1,12 @@
 import Link from "next/link";
 
-export default function Sidebar() {
-  return (
-    <aside className="sidebar">
-      <h2>Excellence Tutor</h2>
+interface SidebarProps { isOpen: boolean; }
 
+export default function Sidebar({ isOpen }: SidebarProps) {
+  return (
+    <aside className={`sidebar${isOpen ? "" : " closed"}`}>
+      <h2>Excellence Tutor</h2>
+      
       <nav>
         <Link href="/">Dashboard</Link>
         <Link href="/students">Students</Link>
