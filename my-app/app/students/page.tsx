@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function StudentsPage() {
     return (
       <main className="content">
@@ -8,7 +10,10 @@ export default function StudentsPage() {
   
         <div className="page-header">
           <h2>Student List</h2>
-          <button className="primary-button">+ Add Student</button>
+          
+          <Button>
+           + Add Student
+          </Button>
         </div>
   
         <div className="table-container">
