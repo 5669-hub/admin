@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DashboardShell from "@/components/DashboardShell";
-import Sidebar from "@/components/Sidebar" ;
-import Navbar from "@/components/Navbar";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,22 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-   title: "Excellence Tutor",
-    description: "Excellence Tutor Admin Dashboard",
-   };
+  title: "Excellence Tutor",
+  description: "Excellence Tutor Admin Dashboard",
+};
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* <Sidebar />
-        <Navbar /> */}
-        
-        <DashboardShell> {children} </DashboardShell>
-      
+        <DashboardShell>
+          {children}
+        </DashboardShell>
       </body>
     </html>
   );

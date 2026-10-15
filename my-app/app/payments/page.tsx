@@ -10,7 +10,7 @@ export default function PaymentsPage() {
         <div className="stats-grid">
           <div className="stat-card">
             <p>Total Revenue</p>
-            <h3>45,000 ETB</h3>
+            <h3>4,500,000 ETB</h3>
           </div>
   
           <div className="stat-card">

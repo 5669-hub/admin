@@ -1,56 +1,42 @@
-import { Button } from "@/components/ui/button";
+import ManagedTable from "@/components/ManagedTable";
+
+const columns = [
+  { key: "name", label: "Name" },
+  { key: "grade", label: "Grade" },
+  { key: "subject", label: "Subject" },
+  { key: "parentContact", label: "Parent Contact" },
+];
+
+const initialRows = [
+  {
+    name: "Samuel Abebe",
+    grade: "Grade 8",
+    subject: "Mathematics",
+    parentContact: "0911 234 567",
+  },
+  {
+    name: "Hana Tesfaye",
+    grade: "Grade 6",
+    subject: "English",
+    parentContact: "0922 345 678",
+  },
+  {
+    name: "Dawit Bekele",
+    grade: "Grade 10",
+    subject: "Physics",
+    parentContact: "0933 456 789",
+  },
+];
 
 export default function StudentsPage() {
-    return (
-      <main className="content">
-        <h1>Students</h1>
-        <p className="dashboard-subtitle">
-          Manage all registered students.
-        </p>
-  
-        <div className="page-header">
-          <h2>Student List</h2>
-          
-          <Button>
-           + Add Student
-          </Button>
-        </div>
-  
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Grade</th>
-                <th>Subject</th>
-                <th>Parent Contact</th>
-              </tr>
-            </thead>
-  
-            <tbody>
-              <tr>
-                <td>Samuel Abebe</td>
-                <td>Grade 8</td>
-                <td>Mathematics</td>
-                <td>0911 234 567</td>
-              </tr>
-  
-              <tr>
-                <td>Hana Tesfaye</td>
-                <td>Grade 6</td>
-                <td>English</td>
-                <td>0922 345 678</td>
-              </tr>
-  
-              <tr>
-                <td>Dawit Bekele</td>
-                <td>Grade 10</td>
-                <td>Physics</td>
-                <td>0933 456 789</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-    );
-  }
+  return (
+    <ManagedTable
+      title="Students"
+      description="Manage all registered students."
+      actionLabel="Create Student"
+      columns={columns}
+      fields={columns}
+      initialRows={initialRows}
+    />
+  );
+}

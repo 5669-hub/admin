@@ -1,51 +1,49 @@
+import ManagedTable from "@/components/ManagedTable";
+
+const columns = [
+  { key: "student", label: "Student" },
+  { key: "subject", label: "Subject" },
+  { key: "grade", label: "Grade" },
+  { key: "status", label: "Status" },
+  { key: "action", label: "Action" },
+];
+
+const initialRows = [
+  {
+    student: "Sarah Alemu",
+    subject: "Mathematics",
+    grade: "Grade 8",
+    status: "Pending",
+    action: "Review",
+  },
+  {
+    student: "Michael Abebe",
+    subject: "Programming",
+    grade: "Grade 11",
+    status: "Approved",
+    action: "View",
+  },
+];
+
 export default function ApplicationsPage() {
-    return (
-      <main className="content">
-        <h1>Applications</h1>
-  
-        <p className="dashboard-subtitle">
-          Review student tutoring applications.
-        </p>
-  
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Student</th>
-                <th>Subject</th>
-                <th>Grade</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-  
-            <tbody>
-              <tr>
-                <td>Sarah Alemu</td>
-                <td>Mathematics</td>
-                <td>Grade 8</td>
-                <td>
-                  <span className="status pending">Pending</span>
-                </td>
-                <td>
-                  <button className="small-button">Review</button>
-                </td>
-              </tr>
-  
-              <tr>
-                <td>Michael Abebe</td>
-                <td>Programming</td>
-                <td>Grade 11</td>
-                <td>
-                  <span className="status approved">Approved</span>
-                </td>
-                <td>
-                  <button className="small-button">View</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-    );
-  }
+  return (
+    <ManagedTable
+      title="Applications"
+      description="Review student tutoring applications."
+      actionLabel="Create Application"
+      columns={columns}
+      fields={[
+        { key: "student", label: "Student" },
+        { key: "subject", label: "Subject" },
+        { key: "grade", label: "Grade" },
+        {
+          key: "status",
+          label: "Status",
+          options: ["Pending", "Approved"],
+        },
+        { key: "action", label: "Action" },
+      ]}
+      initialRows={initialRows}
+    />
+  );
+}

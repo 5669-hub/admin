@@ -1,9 +1,8 @@
-// import Image from "next/image";
-import Sidebar from "@/components/Sidebar";
-import Navbar from "@/components/Navbar";
+
+import ApplicationsChart from "@/components/ApplicationsChart";
 import StatCard from "@/components/StatCard";
-
-
+import RecentActivity from "@/components/RecentActivity";
+import StudentGrowthChart from "@/components/StudentGrowthChart";
 const applications = [
   {
     id: 1,
@@ -37,61 +36,68 @@ const applications = [
 
 export default function Home() {
   return (
-    <div className="dashboard">
-      {/* <Sidebar /> */}
+    <main className="content">
+      <h2>Welcome to Excellence Tutor</h2>
 
-      <div>
-        {/* <Navbar /> */}
+      <p className="dashboard-subtitle">
+        Here's what's happening today.
+      </p>
 
-        <main className="content">
-          <h2>Welcome to Excellence Tutor</h2>
-
-          <p className="dashboard-subtitle">
-            Here's what's happening today.
-          </p>
-
-          <div className="stats-grid">
-            <StatCard title="Students" value={120} />
-            <StatCard title="Tutors" value={18} />
-            <StatCard title="Applications" value={24} />
-            <StatCard title="Classes" value={36} />
-          </div>
-          
-          <section className="applications-section">
-            <h2>Recent Applications</h2>
-
-            <div className="table-container">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Student</th>
-                    <th>Subject</th>
-                    <th>Grade</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {applications.map((application) => (
-                    <tr key={application.id}>
-                      <td>{application.name}</td>
-                      <td>{application.subject}</td>
-                      <td>{application.grade}</td>
-                      <td>
-                        <span
-                          className={`status ${application.status.toLowerCase()}`}
-                        >
-                          {application.status}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        </main>
+      {/* STAT CARDS */}
+      <div className="stats-grid">
+        <StatCard title="Students" value={120} />
+        <StatCard title="Tutors" value={18} />
+        <StatCard title="Applications" value={24} />
+        <StatCard title="Classes" value={36} />
       </div>
-    </div>
+
+    <div className="dashboard-widgets">
+  <div>
+    <ApplicationsChart />
+  </div>
+
+  <div>
+    <StudentGrowthChart />
+  </div>
+</div>
+
+<div className="mt-6">
+  <RecentActivity />
+</div>
+
+<section className="applications-section">
+        <h2>Recent Applications</h2>
+
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Subject</th>
+                <th>Grade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {applications.map((application) => (
+                <tr key={application.id}>
+                  <td>{application.name}</td>
+                  <td>{application.subject}</td>
+                  <td>{application.grade}</td>
+                  <td>
+                    <span
+                      className={`status ${application.status.toLowerCase()}`}
+                    >
+                      {application.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -1,58 +1,45 @@
+import ManagedTable from "@/components/ManagedTable";
+
+const columns = [
+  { key: "name", label: "Name" },
+  { key: "subject", label: "Subject" },
+  { key: "experience", label: "Experience" },
+  { key: "status", label: "Status" },
+];
+
+const initialRows = [
+  {
+    name: "Abel Mekonnen",
+    subject: "Mathematics",
+    experience: "4 years",
+    status: "Active",
+  },
+  {
+    name: "Meron Alemu",
+    subject: "English",
+    experience: "3 years",
+    status: "Active",
+  },
+  {
+    name: "Daniel Girma",
+    subject: "Physics",
+    experience: "5 years",
+    status: "Pending",
+  },
+];
+
 export default function TutorsPage() {
-    return (
-      <main className="content">
-        <h1>Tutors</h1>
-  
-        <p className="dashboard-subtitle">
-          Manage tutors working with Excellence Tutor.
-        </p>
-  
-        <div className="page-header">
-          <h2>Tutor List</h2>
-          <button className="primary-button">+ Add Tutor</button>
-        </div>
-  
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Subject</th>
-                <th>Experience</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-  
-            <tbody>
-              <tr>
-                <td>Abel Mekonnen</td>
-                <td>Mathematics</td>
-                <td>4 years</td>
-                <td>
-                  <span className="status approved">Active</span>
-                </td>
-              </tr>
-  
-              <tr>
-                <td>Meron Alemu</td>
-                <td>English</td>
-                <td>3 years</td>
-                <td>
-                  <span className="status approved">Active</span>
-                </td>
-              </tr>
-  
-              <tr>
-                <td>Daniel Girma</td>
-                <td>Physics</td>
-                <td>5 years</td>
-                <td>
-                  <span className="status pending">Pending</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-    );
-  }
+  return (
+    <ManagedTable
+      title="Tutors"
+      description="Manage tutors working with Excellence Tutor."
+      actionLabel="Create Tutor"
+      columns={columns}
+      fields={[
+        ...columns.slice(0, 3),
+        { key: "status", label: "Status", options: ["Active", "Pending"] },
+      ]}
+      initialRows={initialRows}
+    />
+  );
+}

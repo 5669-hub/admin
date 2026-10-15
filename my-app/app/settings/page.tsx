@@ -13,6 +13,8 @@ export default function SettingsPage() {
           <p>Agency Name: Excellence Tutor</p>
           <p>Location: Addis Ababa</p>
           <p>Email: info@example.com</p>
+          <p>Phone: +251 123 456 789</p>
+          
         </div>
       </main>
     );
