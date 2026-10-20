@@ -1,0 +1,65 @@
+[
+  {
+    "id": "PAY-0001",
+    "student": "Samuel Abebe",
+    "amount": 2500,
+    "dueDate": "2026-10-05",
+    "paymentDate": "2026-10-05",
+    "method": "Bank transfer",
+    "status": "Paid"
+  },
+  {
+    "id": "PAY-0002",
+    "student": "Hana Tesfaye",
+    "amount": 1800,
+    "dueDate": "2026-10-18",
+    "paymentDate": null,
+    "method": "Cash",
+    "status": "Pending"
+  },
+  {
+    "id": "PAY-0003",
+    "student": "Dawit Bekele",
+    "amount": 3200,
+    "dueDate": "2026-10-01",
+    "paymentDate": null,
+    "method": "Mobile money",
+    "status": "Overdue"
+  },
+  {
+    "id": "PAY-0004",
+    "student": "Mulugeta Alemu",
+    "amount": 2500,
+    "dueDate": "2026-09-28",
+    "paymentDate": "2026-10-02",
+    "method": "Bank transfer",
+    "status": "Paid"
+  },
+  {
+    "id": "PAY-0005",
+    "student": "Selamawit Kassa",
+    "amount": 2200,
+    "dueDate": "2026-10-20",
+    "paymentDate": null,
+    "method": "Card",
+    "status": "Pending"
+  },
+  {
+    "id": "PAY-0006",
+    "student": "Meron Alemu",
+    "amount": 1700,
+    "dueDate": "2026-09-22",
+    "paymentDate": "2026-09-22",
+    "method": "Cash",
+    "status": "Paid"
+  },
+  {
+    "id": "PAY-0007",
+    "student": "Abel Mekonnen",
+    "amount": 2800,
+    "dueDate": "2026-10-08",
+    "paymentDate": null,
+    "method": "Mobile money",
+    "status": "Failed"
+  }
+]

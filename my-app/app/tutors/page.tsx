@@ -1,5 +1,5 @@
 import ManagedTable from "@/components/ManagedTable";
-
+import tutors from "@/lib/tutorlist.json";
 const columns = [
   { key: "name", label: "Name" },
   { key: "subject", label: "Subject" },
@@ -7,26 +7,7 @@ const columns = [
   { key: "status", label: "Status" },
 ];
 
-const initialRows = [
-  {
-    name: "Abel Mekonnen",
-    subject: "Mathematics",
-    experience: "4 years",
-    status: "Active",
-  },
-  {
-    name: "Meron Alemu",
-    subject: "English",
-    experience: "3 years",
-    status: "Active",
-  },
-  {
-    name: "Daniel Girma",
-    subject: "Physics",
-    experience: "5 years",
-    status: "Pending",
-  },
-];
+const initialRows = tutors;
 
 export default function TutorsPage() {
   return (

@@ -1,1 +1,32 @@
-// dynamic routing
+[
+  {
+    "name": "Samuel Abebe",
+    "grade": "Grade 8",
+    "subject": "Mathematics",
+    "parentContact": "0911 234 567"
+  },
+  {
+    "name": "Hana Tesfaye",
+    "grade": "Grade 6",
+    "subject": "English",
+    "parentContact": "0922 345 678"
+  },
+  {
+    "name": "Dawit Bekele",
+    "grade": "Grade 10",
+    "subject": "Physics",
+    "parentContact": "0933 456 789"
+  },
+  {
+    "name": "Mulugeta Alemu",
+    "grade": "Grade 9",
+    "subject": "Chemistry",
+    "parentContact": "0944 567 890"
+  },
+  {
+    "name": "Selamawit Kassa",
+    "grade": "Grade 7",
+    "subject": "Biology",
+    "parentContact": "0955 678 901"
+  }
+]

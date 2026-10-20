@@ -1,31 +1,11 @@
 import ManagedTable from "@/components/ManagedTable";
+import students from "@/lib/studentList.json";
 
 const columns = [
   { key: "name", label: "Name" },
   { key: "grade", label: "Grade" },
   { key: "subject", label: "Subject" },
   { key: "parentContact", label: "Parent Contact" },
-];
-
-const initialRows = [
-  {
-    name: "Samuel Abebe",
-    grade: "Grade 8",
-    subject: "Mathematics",
-    parentContact: "0911 234 567",
-  },
-  {
-    name: "Hana Tesfaye",
-    grade: "Grade 6",
-    subject: "English",
-    parentContact: "0922 345 678",
-  },
-  {
-    name: "Dawit Bekele",
-    grade: "Grade 10",
-    subject: "Physics",
-    parentContact: "0933 456 789",
-  },
 ];
 
 export default function StudentsPage() {
@@ -36,7 +16,7 @@ export default function StudentsPage() {
       actionLabel="Create Student"
       columns={columns}
       fields={columns}
-      initialRows={initialRows}
+      initialRows={students}
     />
   );
 }
